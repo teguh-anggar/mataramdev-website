@@ -1,0 +1,56 @@
+/* ====== JOIN FORM ======
+   Two-column field rows, inputs, textarea, focus state.
+   ====================================================== */
+
+.join-section {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.join-form {
+  background: var(--form-bg);
+  padding: 2rem;
+  border: 3px solid var(--border);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition: background 0.3s ease;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.join-form input,
+.join-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 2.5px solid var(--border);
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 500;
+  background: var(--input-bg);
+  color: var(--text);
+  transition: box-shadow 0.15s, background 0.3s ease, color 0.3s ease;
+}
+.join-form input:focus,
+.join-form textarea:focus {
+  outline: none;
+  box-shadow: 4px 4px 0px var(--border);
+  border-color: var(--primary);
+}
+
+.join-form textarea {
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

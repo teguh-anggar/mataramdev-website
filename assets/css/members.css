@@ -1,0 +1,111 @@
+/* ====== MEMBERS / CONTRIBUTORS ======
+   Auto-fit grid, avatar circle, LinkedIn icon link.
+   ====================================================== */
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+}
+
+.member-card {
+  text-align: center;
+  background: var(--bg-card);
+  padding: 1.5rem 1rem;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s, transform 0.15s, background 0.3s ease;
+}
+.member-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-3px, -3px);
+}
+
+.member-avatar {
+  width: 64px;
+  height: 64px;
+  background: var(--primary);
+  color: var(--primary-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 auto 0.75rem;
+  border: 2.5px solid var(--border);
+  box-shadow: 3px 3px 0px var(--border);
+  overflow: hidden;
+}
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+}
+.member-card p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+/* "Join" placeholder card */
+.member-card:last-child .member-avatar {
+  background: #10b981;
+  font-size: 1.8rem;
+}
+
+/* LinkedIn icon link */
+.member-social-link {
+  display: inline-flex;
+  margin-top: 0.75rem;
+  color: var(--text-light);
+  transition: color 0.2s, transform 0.15s;
+}
+.member-social-link:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+.member-social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ====== PROJECTS ======
+   Project cards share .card base; extras: tag chip + tech stack pills.
+   ====================================================== */
+
+.project-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 0.25rem 0.6rem;
+  border: 2px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+[data-theme="dark"] .project-tag {
+  color: #93c5fd;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.project-tech span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--bg);
+  border: 1.5px solid var(--border-light);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+}

@@ -1,0 +1,83 @@
+/* ====== CSS CUSTOM PROPERTIES (THEMING) ======
+   Single source of truth for all design tokens.
+   Light theme is default; [data-theme="dark"] overrides.
+   ====================================================== */
+
+:root {
+  /* ── Light theme ── */
+  --bg: #f8f9fa;
+  --bg-alt: #ffffff;
+  --bg-card: #ffffff;
+  --text: #1a1a2e;
+  --text-muted: #555555;
+  --text-light: #6b7280;
+  --border: #000000;
+  --border-light: #cccccc;
+  --primary: #ff6b35;
+  --primary-dark: #e55a2b;
+  --primary-text: #ffffff;
+  --secondary-text: #37c837;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --shadow: 6px 6px 0px #000000;
+  --shadow-sm: 3px 3px 0px #000000;
+  --shadow-hover: 8px 8px 0px #000000;
+  --hero-bg: #1a1a2e;
+  --hero-text: #ffffff;
+  --footer-bg: #1a1a2e;
+  --footer-text: #cbd5e1;
+  --footer-link: #93c5fd;
+  --header-bg: #ffffff;
+  --stat-bg: #ffedd5;
+  --stat-text: #1a1a2e;
+  --form-bg: #ffffff;
+  --input-bg: #ffffff;
+  --tag-bg: #ff6b35;
+  --tag-text: #ffffff;
+  --slider-btn-bg: rgba(255, 255, 255, 0.9);
+  --slider-btn-color: #1a1a2e;
+  --label-upcoming-bg: #d1fae5;
+  --label-upcoming-text: #065f46;
+  --label-ended-bg: #e5e7eb;
+  --label-ended-text: #6b7280;
+  --toggle-icon: url("../images/dark-mode.svg");
+}
+
+/* ── Dark theme ── */
+[data-theme="dark"] {
+  --bg: #242424;
+  --bg-alt: #242424;
+  --bg-card: #1a1a2e;
+  --text: #e8e8f0;
+  --text-muted: #a0a0b8;
+  --text-light: #8888aa;
+  --border: #e8e8f0;
+  --border-light: #555577;
+  --primary: #ff6b35;
+  --primary-dark: #e55a2b;
+  --primary-text: #ffffff;
+  --accent: #4d8eff;
+  --accent-light: #1e2a4a;
+  --shadow: 6px 6px 0px #000000;
+  --shadow-sm: 3px 3px 0px #000000;
+  --shadow-hover: 8px 8px 0px #000000;
+  --hero-bg: #06060e;
+  --hero-text: #e8e8f0;
+  --footer-bg: #06060e;
+  --footer-text: #8888aa;
+  --footer-link: #4d8eff;
+  --header-bg: #1a1a2e;
+  --stat-bg: #2a1a0a;
+  --stat-text: #e8e8f0;
+  --form-bg: #1a1a2e;
+  --input-bg: #0f0f1a;
+  --tag-bg: #ff6b35;
+  --tag-text: #ffffff;
+  --slider-btn-bg: rgba(26, 26, 46, 0.9);
+  --slider-btn-color: #e8e8f0;
+  --label-upcoming-bg: #064e3b;
+  --label-upcoming-text: #6ee7b7;
+  --label-ended-bg: #374151;
+  --label-ended-text: #9ca3af;
+  --toggle-icon: url("../images/light-mode.svg");
+}

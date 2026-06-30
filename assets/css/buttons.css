@@ -1,0 +1,68 @@
+/* ====== BUTTONS ======
+   Base .btn class + all variant modifiers.
+   Neo-brutalist style: hard box-shadow, shift on hover/active.
+   ====================================================== */
+
+button {
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.15s, background 0.2s;
+  border: 3px solid var(--border);
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-family: Epilogue, system-ui, sans-serif;
+  box-shadow: var(--shadow-sm);
+}
+.btn:hover {
+  text-decoration: none;
+  box-shadow: var(--shadow-hover);
+  transform: translate(-2px, -2px);
+}
+.btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-text);
+  border-color: var(--border);
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-outline:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-small {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+  border-width: 2.5px;
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-secondary:hover {
+  background: var(--text);
+  color: var(--bg-card);
+}

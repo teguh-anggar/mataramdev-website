@@ -1,0 +1,177 @@
+/* ====== ABOUT ======
+   Two-column layout, stat chips.
+   ====================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.about-stats {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.about-stats li {
+  background: var(--stat-bg);
+  padding: 0.75rem 1.25rem;
+  border: 2.5px solid var(--border);
+  border-radius: 5px;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--stat-text);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.about-stats li:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-2px, -2px);
+}
+.about-stats strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* ====== SLIDER (About section) ======
+   Cross-fade image slider with dot indicators.
+   ====================================================== */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  border: 3px solid var(--border);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+
+.slide-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--primary);
+  color: var(--primary-text);
+  padding: 0.4rem 1rem;
+  border: 2.5px solid var(--border);
+  box-shadow: 3px 3px 0px var(--border);
+}
+
+/* Prev / next buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: var(--slider-btn-bg);
+  border: 2.5px solid var(--border);
+  width: 38px;
+  height: 38px;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  color: var(--slider-btn-color);
+  transition: box-shadow 0.15s, transform 0.15s;
+  box-shadow: 3px 3px 0px var(--border);
+  font-weight: 700;
+  opacity: 0;
+  pointer-events: none;
+}
+.slider:hover .slider-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+.slider-btn:hover {
+  box-shadow: 5px 5px 0px var(--border);
+  transform: translateY(-50%) translate(-1px, -1px);
+}
+.slider-btn:active {
+  transform: translateY(-50%) translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border);
+}
+.slider-prev { left: 10px; }
+.slider-next { right: 10px; }
+
+/* Dot indicators */
+.slider-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.slider-dots span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  border: 2px solid var(--border);
+}
+.slider-dots span.active {
+  background: var(--primary);
+  transform: scale(1.3);
+  border-color: var(--border);
+}
+.slider-dots span:hover {
+  background: var(--primary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-stats {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .about-stats li {
+    flex: 1;
+    min-width: 100px;
+  }
+  .slider {
+    height: 220px;
+  }
+}

@@ -1,0 +1,354 @@
+/* ====== EXPLORE PAGE (Section-based layout) ======
+   Styles for explore/index.html
+   Three major branches: Community, Courses, Partnership.
+   All responsive — mobile-first card grids.
+   ====================================================== */
+
+/* ── Page Hero ── */
+.explore-page-hero {
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  padding: 4rem 0 3rem;
+  border-bottom: 3px solid var(--border);
+  transition: background 0.3s ease;
+}
+
+.explore-breadcrumb {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+.explore-breadcrumb a {
+  color: inherit;
+  transition: color 0.2s;
+}
+.explore-breadcrumb a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.explore-page-hero h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--hero-text);
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+}
+.explore-page-hero h1 span {
+  color: var(--primary);
+}
+
+.explore-page-hero > .container > p {
+  font-size: 1.05rem;
+  color: var(--hero-text);
+  opacity: 0.7;
+  max-width: 520px;
+  font-weight: 500;
+}
+
+/* Jump navigation */
+.explore-jump-nav {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.explore-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.65);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.explore-nav-btn:hover {
+  border-color: var(--primary);
+  color: #fff;
+  background: rgba(255, 107, 53, 0.08);
+  text-decoration: none;
+}
+
+/* ── Branch Sections ── */
+.explore-branch {
+  padding: 5rem 0;
+  border-bottom: 3px solid var(--border);
+  transition: background 0.3s ease;
+}
+
+/* Branch header */
+.branch-header {
+  margin-bottom: 2.75rem;
+}
+
+.branch-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.branch-icon {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.branch-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--branch-color, var(--primary));
+  border-bottom: 2.5px solid var(--branch-color, var(--primary));
+  padding-bottom: 0.15rem;
+}
+
+.branch-header h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+  border-left: 5px solid var(--branch-color, var(--primary));
+  padding-left: 1rem;
+}
+
+.branch-header > p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  padding-left: 1.35rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* ── Explore cards grid ── */
+.explore-cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ── Explore card (extends .card from cards.css) ── */
+.explore-card {
+  position: relative;
+  background: var(--bg-card);
+  padding: 1.75rem 1.5rem;
+  border: 3px solid var(--border);
+  border-top: 4px solid var(--branch-color, var(--primary));
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s, transform 0.15s, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text);
+}
+.explore-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-3px, -3px);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.explore-card .card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+.explore-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+.explore-card p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.55;
+  flex: 1;
+}
+
+/* CTA link inside card */
+.explore-card-cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--branch-color, var(--primary));
+}
+a.explore-card:hover .explore-card-cta {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* "Soon" state */
+.explore-soon-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background: var(--border);
+  color: var(--bg);
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+}
+[data-theme="dark"] .explore-soon-badge {
+  background: #555577;
+  color: #ccc;
+}
+.explore-card--soon {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ── Sub-sections ── */
+.explore-subsection {
+  margin-top: 2.75rem;
+}
+.explore-subsection + .explore-subsection {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 2px dashed var(--border-light);
+}
+
+.explore-subsection-title {
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.explore-subsection-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--border-light);
+  opacity: 0.35;
+}
+
+/* ── Contacts mini-grid ── */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 2.5px solid var(--border);
+  border-radius: 5px;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: var(--text);
+  transition: box-shadow 0.15s, transform 0.15s, background 0.3s ease;
+}
+.contact-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-2px, -2px);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.contact-card-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.contact-card-info h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.contact-card-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Courses CTA row ── */
+.explore-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px dashed var(--border-light);
+  flex-wrap: wrap;
+}
+.explore-cta-row p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .explore-page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .explore-branch {
+    padding: 3rem 0;
+  }
+
+  .branch-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .explore-jump-nav {
+    gap: 0.5rem;
+  }
+
+  .explore-nav-btn {
+    font-size: 0.72rem;
+    padding: 0.4rem 0.85rem;
+  }
+
+  .explore-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+  ┌─────────────────────────────────────────────────────┐
+  │  PROJECT STRUCTURE CONVENTION                        │
+  │                                                      │
+  │  Root page    → index.html        ./assets/          │
+  │  Sub-pages    → pagename/index.html  ../assets/      │
+  │  Deeper       → a/b/index.html    ../../assets/      │
+  │                                                      │
+  │  JS entry: ../assets/js/explore_init.js              │
+  │  CSS entry: ../assets/css/style.css                  │
+  └─────────────────────────────────────────────────────┘
+-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== PRIMARY META ====== -->
+  <title>Explore — Mataram Dev</title>
+  <meta name="description"
+    content="Explore Mataram Dev — discover our community, courses, and partnership opportunities." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mataramdev.org/explore/" />
+
+  <!-- ====== FAVICON ====== -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="shortcut icon" href="../assets/images/logo.svg" />
+  <meta name="theme-color" content="#10B981" />
+
+  <!-- ====== OPEN GRAPH ====== -->
+  <meta property="og:type"    content="website" />
+  <meta property="og:url"     content="https://mataramdev.org/explore/" />
+  <meta property="og:title"   content="Explore — Mataram Dev" />
+  <meta property="og:description" content="Discover everything Mataram Dev offers: community, courses, and partnerships." />
+  <meta property="og:image"   content="https://mataramdev.org/assets/images/fotobareng.webp" />
+
+  <!-- ====== STYLES ====== -->
+  <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..900;1,300..900&family=Heebo:wght@400;700;800&display=swap");
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo-container">
+        <a href="../index.html" class="logo">
+          <img src="../assets/images/logo.svg" alt="Mataram Dev Logo" class="logo-img" />
+        </a>
+        <a href="../index.html" class="logo-text">Mataram &nbsp;<span style="color:#10B981;">&ltDev&gt</span></a>
+      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="../index.html#about"     data-i18n="nav-about">About</a></li>
+          <li><a href="../index.html#activities" data-i18n="nav-activities">Activities</a></li>
+          <li><a href="../index.html#projects"   data-i18n="nav-projects">Projects</a></li>
+          <li><a href="../index.html#resources"  data-i18n="nav-resources">Resources</a></li>
+          <li><a href="../index.html#events"     data-i18n="nav-events">Events</a></li>
+          <li><a href="../index.html#members"    data-i18n="nav-contributors">Contributors</a></li>
+          <li><a href="../explore/" class="btn btn-small" data-i18n="nav-join">Explore</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+          <img src="../assets/images/dark-mode.svg" alt="Toggle Theme" />
+        </button>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle Language">ID</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ====== PAGE HERO ====== -->
+  <section class="explore-page-hero">
+    <div class="container">
+      <div class="explore-breadcrumb">
+        <a href="../index.html">Home</a> &rsaquo; Explore
+      </div>
+      <h1>Explore <span>Mataram Dev</span></h1>
+      <p>Everything we offer — organized by what matters to you.</p>
+      <nav class="explore-jump-nav" aria-label="Jump to section">
+        <a href="#community"  class="explore-nav-btn">🤝 Community</a>
+        <a href="#courses"    class="explore-nav-btn">🎓 Courses</a>
+        <a href="#partnership" class="explore-nav-btn">🌐 Partnership</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ====== BRANCH: COMMUNITY ====== -->
+  <section id="community" class="explore-branch" style="--branch-color: #ff6b35">
+    <div class="container">
+
+      <div class="branch-header">
+        <div class="branch-label">
+          <span class="branch-icon">🤝</span>
+          <span class="branch-tag">Community</span>
+        </div>
+        <h2>Community</h2>
+        <p>Connect with makers, designers, and developers in Mataram. Contribute to open source, share knowledge, and build together.</p>
+      </div>
+
+      <!-- Main community cards -->
+      <div class="cards-grid explore-cards-grid">
+
+        <a href="../index.html#members" class="explore-card">
+          <div class="card-icon">👥</div>
+          <h3>Contributors</h3>
+          <p>Meet the makers and developers who are actively building Mataram Dev and its projects together.</p>
+          <span class="explore-card-cta">Meet the Team &rarr;</span>
+        </a>
+
+        <a href="../index.html#projects" class="explore-card">
+          <div class="card-icon">🚀</div>
+          <h3>Projects</h3>
+          <p>Open source projects born inside the community. Join an existing one or bring your own idea.</p>
+          <span class="explore-card-cta">View Projects &rarr;</span>
+        </a>
+
+        <a href="../index.html#resources" class="explore-card">
+          <div class="card-icon">📚</div>
+          <h3>Resources</h3>
+          <p>Curated roadmaps, free courses, guides, and tools — hand-picked by the community for the community.</p>
+          <span class="explore-card-cta">Browse Resources &rarr;</span>
+        </a>
+
+        <div class="explore-card explore-card--soon">
+          <span class="explore-soon-badge">Soon</span>
+          <div class="card-icon">💬</div>
+          <h3>Forum</h3>
+          <p>Ask questions, get feedback, share progress, and stay connected between our weekly sessions.</p>
+        </div>
+
+      </div>
+
+      <!-- Contacts subsection -->
+      <div class="explore-subsection">
+        <h3 class="explore-subsection-title">📡 Contacts</h3>
+        <div class="contacts-grid">
+
+          <a href="https://instagram.com/mataramdev" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card-icon">📱</span>
+            <div class="contact-card-info">
+              <h4>Social Media</h4>
+              <p>Follow us on Instagram, Twitter &amp; more</p>
+            </div>
+          </a>
+
+          <a href="mailto:hello@mataramdev.org" class="contact-card">
+            <span class="contact-card-icon">📧</span>
+            <div class="contact-card-info">
+              <h4>Inquiry</h4>
+              <p>hello@mataramdev.org</p>
+            </div>
+          </a>
+
+          <a href="https://youtube.com/@mataramdev" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card-icon">▶️</span>
+            <div class="contact-card-info">
+              <h4>Channel</h4>
+              <p>Watch talks &amp; past sessions on YouTube</p>
+            </div>
+          </a>
+
+          <a href="https://t.me/mataramdevcom" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card-icon">✈️</span>
+            <div class="contact-card-info">
+              <h4>Telegram</h4>
+              <p>Join the Telegram community group</p>
+            </div>
+          </a>
+
+          <a href="https://wa.me/6287750765028" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card-icon">💬</span>
+            <div class="contact-card-info">
+              <h4>WhatsApp</h4>
+              <p>Chat with us directly on WhatsApp</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== BRANCH: COURSES ====== -->
+  <section id="courses" class="explore-branch section-alt" style="--branch-color: #4d8eff">
+    <div class="container">
+
+      <div class="branch-header">
+        <div class="branch-label">
+          <span class="branch-icon">🎓</span>
+          <span class="branch-tag">Courses</span>
+        </div>
+        <h2>Courses</h2>
+        <p>Grow your skills with community-led programs — from technical tracks to language fluency. All beginner-friendly, guided by community mentors.</p>
+      </div>
+
+      <!-- Tech Skill subsection -->
+      <div class="explore-subsection">
+        <h3 class="explore-subsection-title">💻 Tech Skill</h3>
+        <div class="cards-grid explore-cards-grid">
+
+          <div class="explore-card explore-card--soon">
+            <span class="explore-soon-badge">Soon</span>
+            <div class="card-icon">🔐</div>
+            <h3>Cybersecurity</h3>
+            <p>Network defense, ethical hacking basics, and digital forensics fundamentals.</p>
+          </div>
+
+          <div class="explore-card explore-card--soon">
+            <span class="explore-soon-badge">Soon</span>
+            <div class="card-icon">🌐</div>
+            <h3>FSWE</h3>
+            <p>Fullstack Web Engineering — from HTML to backend APIs and cloud deployment.</p>
+          </div>
+
+          <div class="explore-card explore-card--soon">
+            <span class="explore-soon-badge">Soon</span>
+            <div class="card-icon">🤖</div>
+            <h3>AI / ML</h3>
+            <p>Machine learning concepts, Python, and hands-on project experience with real data.</p>
+          </div>
+
+          <div class="explore-card explore-card--soon">
+            <span class="explore-soon-badge">Soon</span>
+            <div class="card-icon">📋</div>
+            <h3>Project Mgmt</h3>
+            <p>Agile, Scrum, and effective team & product management for tech projects.</p>
+          </div>
+
+          <div class="explore-card explore-card--soon">
+            <span class="explore-soon-badge">Soon</span>
+            <div class="card-icon">🎨</div>
+            <h3>Design &amp; Multimedia</h3>
+            <p>UI/UX design principles, visual storytelling, and digital content creation.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Language Center subsection -->
+      <div class="explore-subsection">
+        <h3 class="explore-subsection-title">🌏 Language Center</h3>
+        <div class="cards-grid explore-cards-grid">
+
+          <div class="explore-card explore-card--soon">
+            <span class="explore-soon-badge">Soon</span>
+            <div class="card-icon">🇬🇧</div>
+            <h3>English</h3>
+            <p>Conversational and professional English for the global tech industry. Covers writing, speaking, and technical vocabulary.</p>
+          </div>
+
+          <div class="explore-card explore-card--soon">
+            <span class="explore-soon-badge">Soon</span>
+            <div class="card-icon">🇯🇵</div>
+            <h3>Japanese</h3>
+            <p>Basic to intermediate Japanese, including tech and business vocabulary for Japanese-market careers.</p>
+          </div>
+
+          <div class="explore-card explore-card--soon">
+            <span class="explore-soon-badge">Soon</span>
+            <div class="card-icon">🇸🇦</div>
+            <h3>Arabic</h3>
+            <p>Modern Standard Arabic and conversational fundamentals for professional and cultural fluency.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Course interest CTA -->
+      <div class="explore-cta-row">
+        <p>Interested in teaching or designing a course?</p>
+        <a href="mailto:hello@mataramdev.org" class="btn btn-outline">Reach Out &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== BRANCH: PARTNERSHIP ====== -->
+  <section id="partnership" class="explore-branch" style="--branch-color: #10b981">
+    <div class="container">
+
+      <div class="branch-header">
+        <div class="branch-label">
+          <span class="branch-icon">🌐</span>
+          <span class="branch-tag">Partnership</span>
+        </div>
+        <h2>Partnership</h2>
+        <p>We collaborate with communities, businesses, NGOs, and universities across Indonesia to create meaningful impact through technology.</p>
+      </div>
+
+      <div class="cards-grid explore-cards-grid">
+
+        <a href="mailto:hello@mataramdev.org" class="explore-card">
+          <div class="card-icon">🏘️</div>
+          <h3>Communities</h3>
+          <p>Join a growing network of tech communities across Indonesia. Cross-promote events, share speakers, and co-host programs.</p>
+          <span class="explore-card-cta">Connect &rarr;</span>
+        </a>
+
+        <a href="mailto:hello@mataramdev.org" class="explore-card">
+          <div class="card-icon">💼</div>
+          <h3>Business</h3>
+          <p>Corporate sponsorships, product demos, hiring pipelines, and brand exposure within the Lombok tech ecosystem.</p>
+          <span class="explore-card-cta">Partner &rarr;</span>
+        </a>
+
+        <a href="mailto:hello@mataramdev.org" class="explore-card">
+          <div class="card-icon">🌱</div>
+          <h3>NGO</h3>
+          <p>Social impact collaborations and community-driven tech programs that serve underrepresented groups in NTB.</p>
+          <span class="explore-card-cta">Collaborate &rarr;</span>
+        </a>
+
+        <a href="mailto:hello@mataramdev.org" class="explore-card">
+          <div class="card-icon">🏛️</div>
+          <h3>Universities</h3>
+          <p>Campus club support, research collaborations, internship pipelines, and student-facing tech programs.</p>
+          <span class="explore-card-cta">Apply &rarr;</span>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">
+            <img src="../assets/images/logo.svg" alt="Mataram Dev Logo" />
+            <span class="footer-logo-text">Mataram &nbsp;<span>&lt;Dev&gt;</span></span>
+          </a>
+          <p class="footer-tagline">
+            A community of makers, designers &amp; innovators based in Mataram, Lombok &ndash; Indonesia.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Explore</span>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#activities">Activities</a>
+          <a href="../index.html#events">Events</a>
+          <a href="../index.html#blog">Articles</a>
+          <a href="../index.html#members">Contributors</a>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Community</span>
+          <a href="../index.html#join">Join Us</a>
+          <a href="https://github.com/mataramdevcom" target="_blank">Open Source</a>
+          <a href="https://t.me/mataramdevcom" target="_blank">Telegram Group</a>
+          <a href="https://wa.me/6287750765028" target="_blank">Chat on WA</a>
+        </div>
+
+        <div class="footer-find-us">
+          <span class="footer-nav-heading">Find Us</span>
+          <p class="footer-find-item">📍 Mataram, Lombok<br>West Nusa Tenggara,<br>Indonesia</p>
+          <p class="footer-find-item">💻 WFC &ndash; Every Wednesday</p>
+          <div class="footer-map">
+            <iframe
+              src="https://maps.google.com/maps?q=Mataram,+Nusa+Tenggara+Barat,+Indonesia&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              title="Mataram Dev location — Mataram, Lombok"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <a href="../index.html#join" class="footer-join-btn">JOIN NOW &rarr;</a>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mataram Dev &mdash; Made with ❤️ from Lombok.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script type="module" src="../assets/js/explore_init.js"></script>
+
+</body>
+</html>

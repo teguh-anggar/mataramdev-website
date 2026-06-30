@@ -1,0 +1,131 @@
+/* ====== EVENTS ======
+   Event list, date stamps, status labels, action buttons.
+   Ended events have their RSVP button auto-greyed out.
+   ====================================================== */
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: var(--bg-card);
+  padding: 1.25rem;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s, transform 0.15s, background 0.3s ease;
+}
+.event-item:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-2px, -2px);
+}
+
+/* Date stamp */
+.event-date {
+  text-align: center;
+  background: var(--primary);
+  padding: 0.5rem 0.75rem;
+  min-width: 65px;
+  flex-shrink: 0;
+  border: 2.5px solid var(--border);
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px var(--border);
+}
+.event-day {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary-text);
+  line-height: 1.1;
+}
+.event-month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--primary-text);
+  font-weight: 700;
+}
+
+/* Info block */
+.event-info {
+  flex: 1;
+}
+.event-info-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.event-info-header h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.event-meta {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+.event-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Status label (Upcoming / Ended) */
+.event-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.65rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+}
+.event-label.upcoming {
+  background: var(--label-upcoming-bg);
+  color: var(--label-upcoming-text);
+}
+.event-label.ended {
+  background: var(--label-ended-bg);
+  color: var(--label-ended-text);
+}
+
+/* Action buttons */
+.event-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* Ended RSVP — greyed */
+.event-item.ended .btn-primary {
+  background: var(--label-ended-bg);
+  border-color: var(--border);
+  color: var(--label-ended-text);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .event-item {
+    flex-direction: column;
+  }
+  .event-actions {
+    flex-direction: row;
+    align-self: stretch;
+    width: 100%;
+  }
+  .event-actions .btn {
+    flex: 1;
+    text-align: center;
+  }
+}

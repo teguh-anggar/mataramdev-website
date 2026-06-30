@@ -1,0 +1,224 @@
+/* ====== FOOTER ======
+   Always-dark 4-column grid footer (independent of theme).
+   Columns: Brand | Explore | Community | Find Us
+   ====================================================== */
+
+.footer {
+  background: #13131f;
+  color: #b0b8cc;
+  padding: 3.5rem 0 2rem;
+  font-size: 0.9rem;
+  border-top: 4px solid #2a2a40;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 4-column grid */
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+/* ── Brand col ── */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  width: 100px;
+  height: 80px;
+  gap: 0;
+  margin-left: 0 
+}
+
+.footer-logo-text {
+  font-family: Heebo, system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #16326c;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.footer-logo-text:hover {
+  text-decoration: none;
+}
+
+.footer-logo-text span {
+  color: var(--secondary-text);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-left: 0.35rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  font-size: 0.875rem;
+  color: #8890a4;
+  line-height: 1.6;
+  max-width: 220px;
+}
+
+.footer-social-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.25rem;
+}
+
+.footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #2e2e48;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #cdd0dc !important;
+  background: #1a1a2e;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.15s;
+  width: fit-content;
+  box-shadow: 3px 3px 0px #0a0a14;
+}
+.footer-social-btn:hover {
+  border-color: var(--primary);
+  background: #22223a;
+  color: #ffffff !important;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #0a0a14;
+}
+.footer-social-btn .btn-emoji {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ── Nav columns ── */
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-nav-heading {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.footer-nav-col a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #b0b8cc !important;
+  padding: 0.1rem 0;
+  transition: color 0.2s, padding-left 0.2s;
+}
+.footer-nav-col a:hover {
+  color: #ffffff !important;
+  padding-left: 4px;
+}
+
+/* ── Find Us column ── */
+.footer-find-us {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-find-item {
+  font-size: 0.875rem;
+  color: #b0b8cc;
+  line-height: 1.5;
+}
+
+/* JOIN NOW button */
+.footer-join-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.65rem 1.4rem;
+  background: var(--primary);
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 2px solid #c0521f;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px #8a3614;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+}
+.footer-join-btn:hover {
+  background: #e55a2b;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #6a2810;
+}
+
+/* ── Map widget ── */
+.footer-map {
+  margin-top: 0.85rem;
+  border: 2px solid #2a2a40;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 3px 3px 0 #0a0a14;
+}
+.footer-map iframe {
+  display: block;
+  width: 100%;
+  height: 170px;
+  /* Dark-tint filter so the map blends with the always-dark footer */
+  filter: invert(90%) hue-rotate(180deg) brightness(0.75) saturate(0.85);
+  transition: filter 0.3s ease;
+  border: none;
+}
+.footer-map:hover iframe {
+  filter: invert(85%) hue-rotate(180deg) brightness(0.85) saturate(1);
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #2a2a40;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #5a6070;
+}
+
+/* Legacy social icon row (kept for fallback) */
+.footer-socials a {
+  color: var(--footer-text);
+  transition: color 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-socials a:hover {
+  color: var(--primary);
+  transform: scale(1.15);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-social-btns {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

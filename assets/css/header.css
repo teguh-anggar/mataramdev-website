@@ -1,0 +1,234 @@
+/* ====== HEADER & NAVIGATION ======
+   Sticky header bar, nav link hover underline animation,
+   hamburger menu toggle, theme button, language button.
+   ====================================================== */
+
+/* ── Header ── */
+.header {
+  background: var(--header-bg);
+  border-bottom: 3px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.logo {
+  display: flex;
+  width: 175px;
+  height: 50px;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* ── Nav ── */
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.nav a {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.2s;
+}
+.nav a:hover {
+  color: var(--primary);
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transition: width 0.2s ease;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ── Hamburger toggle ── */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 3px solid var(--border);
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0.25rem 0.6rem;
+  box-shadow: var(--shadow-sm);
+  background: var(--bg-alt);
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+  font-weight: 700;
+}
+.nav-toggle:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-2px, -2px);
+}
+.nav-toggle:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border);
+}
+
+/* ── Header controls (theme + lang buttons) ── */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+/* ── Theme toggle button ── */
+.theme-toggle {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg-alt);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+  padding: 6px;
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-2px, -2px);
+}
+.theme-toggle:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border);
+}
+.theme-toggle img {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+.theme-toggle:active img {
+  transform: rotate(360deg);
+}
+
+/* ── Language toggle button ── */
+.lang-toggle {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  border: 2.5px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg-alt);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--text);
+  font-family: Heebo, system-ui, sans-serif;
+}
+.lang-toggle:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-2px, -2px);
+}
+.lang-toggle:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .header-controls {
+    margin-left: auto;
+    margin-right: 0.75rem;
+  }
+
+  .nav {
+    display: none;
+    margin-left: 0;
+  }
+  .nav.open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    padding: 1rem 1.25rem;
+    border-bottom: 3px solid var(--border);
+  }
+  .nav.open ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* ── Narrow phones (≤ 480 px) ── */
+@media (max-width: 480px) {
+  /* Shrink logo so controls have room */
+  .logo-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Tighten the controls row */
+  .header-controls {
+    gap: 0.3rem;
+    margin-right: 0.5rem;
+  }
+
+  /* Smaller toggle buttons */
+  .theme-toggle,
+  .lang-toggle {
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+  }
+  .theme-toggle img {
+    width: 14px;
+    height: 14px;
+  }
+  .lang-toggle {
+    font-size: 0.72rem;
+    margin-left: 0.25rem;
+  }
+
+  /* Smaller hamburger */
+  .nav-toggle {
+    font-size: 1.25rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
