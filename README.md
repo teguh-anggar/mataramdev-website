@@ -1,5 +1,4 @@
-
-# <img src="assets/images/logo.svg" width=50> Mataram Dev Community Profile
+# <img src="assets/images/logo-dark.svg" width=250> Mataram Dev Community Profile
 
 ## 🛠️ Built on HTML, CSS, JS and BITCoder AI Assistant
 
@@ -130,7 +129,7 @@ cp .env.example .env
 ```
 
 | Variable            | Description                     |
-|---------------------|---------------------------------|
+| ------------------- | ------------------------------- |
 | `SUPABASE_URL`      | Your Supabase project URL       |
 | `SUPABASE_ANON_KEY` | Your Supabase public (anon) key |
 
@@ -143,7 +142,7 @@ cp .env.example .env
 Translation strings are stored in `assets/lang/`.
 
 | File      | Language   |
-|-----------|------------|
+| --------- | ---------- |
 | `en.json` | English    |
 | `id.json` | Indonesian |
 
