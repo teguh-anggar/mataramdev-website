@@ -23,11 +23,30 @@
 
 .logo {
   display: flex;
-  width: 175px;
+  width: 250px;
   height: 50px;
   align-items: center;
   gap: 0.5rem;
 }
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  font-family: Heebo, system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.logo-highlight {
+  color: var(--secondary-text);
+  font-weight: 800;
+}
+
 /* ── Nav ── */
 .nav {
   margin-left: auto;

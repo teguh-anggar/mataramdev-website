@@ -41,30 +41,30 @@
   <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..900;1,300..900&family=Heebo:wght@400;700;800&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300..900&display=swap");
   </style>
 </head>
 
 <body>
 
-  <!-- ====== HEADER ====== -->
+  <!-- ====== HEADER / NAVIGATION ====== -->
   <header class="header">
     <div class="container header-inner">
       <div class="logo-container">
-        <a href="../index.html" class="logo">
-          <img src="../assets/images/logo.svg" alt="Mataram Dev Logo" class="logo-img" />
+        <a href="../index.html" class="logo" aria-label="Mataram Dev Logo">
+          <img src="../assets/images/logo-header.svg" alt="Mataram Dev Logo" />
         </a>
-        <a href="../index.html" class="logo-text">Mataram &nbsp;<span style="color:#10B981;">&ltDev&gt</span></a>
       </div>
       <nav class="nav" id="nav">
         <ul>
-          <li><a href="../index.html#about"     data-i18n="nav-about">About</a></li>
+          <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
+          <li><a href="../index.html#about" data-i18n="nav-about">About</a></li>
           <li><a href="../index.html#activities" data-i18n="nav-activities">Activities</a></li>
-          <li><a href="../index.html#projects"   data-i18n="nav-projects">Projects</a></li>
-          <li><a href="../index.html#resources"  data-i18n="nav-resources">Resources</a></li>
-          <li><a href="../index.html#events"     data-i18n="nav-events">Events</a></li>
-          <li><a href="../index.html#members"    data-i18n="nav-contributors">Contributors</a></li>
-          <li><a href="../explore/" class="btn btn-small" data-i18n="nav-join">Explore</a></li>
+          <li><a href="../index.html#blog" data-i18n="nav-blog">Blog</a></li>
+          <li><a href="../index.html#events" data-i18n="nav-events">Events</a></li>
+          <li>
+            <a href="./" class="btn btn-small" data-i18n="nav-join">Explore ↗</a>
+          </li>
         </ul>
       </nav>
       <div class="header-controls">
@@ -109,21 +109,21 @@
       <!-- Main community cards -->
       <div class="cards-grid explore-cards-grid">
 
-        <a href="../index.html#members" class="explore-card">
+        <a href="#members" class="explore-card">
           <div class="card-icon">👥</div>
           <h3>Contributors</h3>
           <p>Meet the makers and developers who are actively building Mataram Dev and its projects together.</p>
           <span class="explore-card-cta">Meet the Team &rarr;</span>
         </a>
 
-        <a href="../index.html#projects" class="explore-card">
+        <a href="#projects" class="explore-card">
           <div class="card-icon">🚀</div>
           <h3>Projects</h3>
           <p>Open source projects born inside the community. Join an existing one or bring your own idea.</p>
           <span class="explore-card-cta">View Projects &rarr;</span>
         </a>
 
-        <a href="../index.html#resources" class="explore-card">
+        <a href="#resources" class="explore-card">
           <div class="card-icon">📚</div>
           <h3>Resources</h3>
           <p>Curated roadmaps, free courses, guides, and tools — hand-picked by the community for the community.</p>
@@ -332,42 +332,318 @@
     </div>
   </section>
 
+  <!-- ====== PROJECTS ====== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="projects-title">Featured Projects</h2>
+      <div class="cards-grid">
+        <div class="card project-card">
+          <div class="project-tag">Open Source</div>
+          <h3>mataramdev-website</h3>
+          <p data-i18n="proj-website-desc">
+            The official community website of Mataram Dev, built
+            collaboratively by members using HTML, CSS, and vanilla JS.
+          </p>
+          <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
+          <a
+            href="https://github.com/mataramdevcom/mataramdev-website"
+            target="_blank"
+            class="btn btn-small btn-secondary"
+            style="margin-top: 1rem"
+            >GitHub Repo</a
+          >
+        </div>
+        <div class="card project-card">
+          <div class="project-tag">Directory</div>
+          <h3>Lombok Dev Directory</h3>
+          <p data-i18n="proj-dir-desc">
+            A registry of developers, designers, and tech talents based in
+            Lombok to help local talents get discovered.
+          </p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+          </div>
+          <a
+            href="https://github.com/mataramdevcom/lombok-dev-directory"
+            target="_blank"
+            class="btn btn-small btn-secondary"
+            style="margin-top: 1rem"
+            >GitHub Repo</a
+          >
+        </div>
+        <div class="card project-card">
+          <div class="project-tag">Learning</div>
+          <h3>Belajar Koding Bot</h3>
+          <p data-i18n="proj-bot-desc">
+            Discord/Telegram bot helping members find coding materials,
+            practice problems, and get community news alerts.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>AI API</span>
+          </div>
+          <a
+            href="https://github.com/mataramdevcom/belajar-koding-bot"
+            target="_blank"
+            class="btn btn-small btn-secondary"
+            style="margin-top: 1rem"
+            >GitHub Repo</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== RESOURCES ====== -->
+  <section id="resources" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="resources-title">Resources</h2>
+      <div class="cards-grid">
+        <div class="card resource-card">
+          <div class="card-icon">🗺️</div>
+          <h3 data-i18n="res-roadmap-title">Web Dev Roadmap</h3>
+          <p data-i18n="res-roadmap-desc">
+            Curated learning path from zero to professional web developer,
+            tailor-made for our community.
+          </p>
+          <a
+            href="https://roadmap.sh"
+            target="_blank"
+            class="blog-readmore"
+            data-i18n="res-learn-more"
+            style="margin-top: 1rem; display: inline-block"
+            >Learn More →</a
+          >
+        </div>
+        <div class="card resource-card">
+          <div class="card-icon">🚀</div>
+          <h3 data-i18n="res-oss-title">OSS Contribution Guide</h3>
+          <p data-i18n="res-oss-desc">
+            Learn how to make your first pull request, write clean commit
+            messages, and participate in our projects.
+          </p>
+          <a
+            href="#"
+            class="blog-readmore"
+            data-i18n="res-learn-more"
+            style="margin-top: 1rem; display: inline-block"
+            >Learn More →</a
+          >
+        </div>
+        <div class="card resource-card">
+          <div class="card-icon">🛠️</div>
+          <h3 data-i18n="res-tools-title">Free Developer Tools</h3>
+          <p data-i18n="res-tools-desc">
+            A collection of free hosting, design assets, and development
+            utilities to build your MVP without cost.
+          </p>
+          <a
+            href="#"
+            class="blog-readmore"
+            data-i18n="res-learn-more"
+            style="margin-top: 1rem; display: inline-block"
+            >Learn More →</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MEMBERS ====== -->
+  <section id="members" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="members-title">Our Contributors</h2>
+      <div class="members-grid">
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="../assets/images/fandi.jpg" alt="Fandi" />
+          </div>
+          <h3>Fandi</h3>
+          <p>AI/ML Engineer</p>
+          <a
+            href="https://linkedin.com/in/fandi"
+            target="_blank"
+            class="member-social-link"
+            aria-label="Fandi's LinkedIn"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="../assets/images/anto.jpg" alt="Anto" />
+          </div>
+          <h3>Anto</h3>
+          <p>Fullstack Developer</p>
+          <a
+            href="https://linkedin.com/in/anto"
+            target="_blank"
+            class="member-social-link"
+            aria-label="Anto's LinkedIn"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="../assets/images/dimas.jpg" alt="Dimas" />
+          </div>
+          <h3>Dimas</h3>
+          <p>Cyber Security</p>
+          <a
+            href="https://linkedin.com/in/dimas"
+            target="_blank"
+            class="member-social-link"
+            aria-label="Dimas's LinkedIn"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="../assets/images/maulana.jpeg" alt="Maulana" />
+          </div>
+          <h3>Maulana</h3>
+          <p>DevOps Engineer</p>
+          <a
+            href="https://linkedin.com/in/maulana"
+            target="_blank"
+            class="member-social-link"
+            aria-label="Maulana's LinkedIn"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="../assets/images/gilang.jpeg" alt="Gilang" />
+          </div>
+          <h3>Gilang</h3>
+          <p>Security Analyst</p>
+          <a
+            href="https://linkedin.com/in/gilang"
+            target="_blank"
+            class="member-social-link"
+            aria-label="Gilang's LinkedIn"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">+</div>
+          <h3 data-i18n="members-join">You?</h3>
+          <p data-i18n="members-join-sub">Join now!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ====== FOOTER ====== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
 
+        <!-- Brand col -->
         <div class="footer-brand">
           <a href="../index.html" class="footer-logo">
-            <img src="../assets/images/logo.svg" alt="Mataram Dev Logo" />
-            <span class="footer-logo-text">Mataram &nbsp;<span>&lt;Dev&gt;</span></span>
+            <img src="../assets/images/logo-footer-dark.svg" alt="Mataram Dev Logo" />
           </a>
           <p class="footer-tagline">
-            A community of makers, designers &amp; innovators based in Mataram, Lombok &ndash; Indonesia.
+            A community of makers, designers &amp; innovators based in
+            Mataram, Lombok &ndash; Indonesia.
           </p>
+          <div class="footer-social-btns">
+            <a
+              href="https://wa.me/6287750765028"
+              target="_blank"
+              class="footer-social-btn"
+              id="footer-wa"
+            >
+              <span class="btn-emoji">💬</span> WhatsApp
+            </a>
+            <a
+              href="https://t.me/mataramdevcom"
+              target="_blank"
+              class="footer-social-btn"
+              id="footer-tg"
+            >
+              <span class="btn-emoji">✈️</span> Telegram
+            </a>
+            <a
+              href="https://github.com/mataramdevcom"
+              target="_blank"
+              class="footer-social-btn"
+              id="footer-gh"
+            >
+              <span class="btn-emoji">🦊</span> GitHub
+            </a>
+          </div>
         </div>
 
+        <!-- Explore col -->
         <div class="footer-nav-col">
           <span class="footer-nav-heading">Explore</span>
           <a href="../index.html#about">About</a>
           <a href="../index.html#activities">Activities</a>
           <a href="../index.html#events">Events</a>
           <a href="../index.html#blog">Articles</a>
-          <a href="../index.html#members">Contributors</a>
+          <a href="#members">Contributors</a>
         </div>
 
+        <!-- Community col -->
         <div class="footer-nav-col">
           <span class="footer-nav-heading">Community</span>
           <a href="../index.html#join">Join Us</a>
-          <a href="https://github.com/mataramdevcom" target="_blank">Open Source</a>
-          <a href="https://t.me/mataramdevcom" target="_blank">Telegram Group</a>
+          <a href="https://github.com/mataramdevcom" target="_blank"
+            >Open Source</a
+          >
+          <a href="https://t.me/mataramdevcom" target="_blank"
+            >Telegram Group</a
+          >
           <a href="https://wa.me/6287750765028" target="_blank">Chat on WA</a>
+          <a href="../index.html#events">Upcoming Events</a>
         </div>
 
+        <!-- Find Us col -->
         <div class="footer-find-us">
           <span class="footer-nav-heading">Find Us</span>
-          <p class="footer-find-item">📍 Mataram, Lombok<br>West Nusa Tenggara,<br>Indonesia</p>
+          <p class="footer-find-item">
+            📍 Mataram, Lombok<br />West Nusa Tenggara,<br />Indonesia
+          </p>
           <p class="footer-find-item">💻 WFC &ndash; Every Wednesday</p>
+          <p class="footer-find-item">🎤 Meetup &ndash; Monthly</p>
+          <p class="footer-find-item">🚀 Open to all levels</p>
           <div class="footer-map">
             <iframe
               src="https://maps.google.com/maps?q=Mataram,+Nusa+Tenggara+Barat,+Indonesia&t=&z=14&ie=UTF8&iwloc=&output=embed"
@@ -377,15 +653,22 @@
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <a href="../index.html#join" class="footer-join-btn">JOIN NOW &rarr;</a>
+          <a href="../index.html#join" class="footer-join-btn" id="footer-join-now"
+            >JOIN NOW &rarr;</a
+          >
         </div>
-
       </div>
+
       <div class="footer-bottom">
         &copy; 2026 Mataram Dev &mdash; Made with ❤️ from Lombok.
       </div>
     </div>
   </footer>
+
+  <!-- ====== BACK TO TOP ====== -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    ↑
+  </button>
 
   <!-- ====== SCRIPTS ====== -->
   <script type="module" src="../assets/js/explore_init.js"></script>

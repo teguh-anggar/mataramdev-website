@@ -19,7 +19,7 @@ button {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-family: Epilogue, system-ui, sans-serif;
+  font-family: Heebo, system-ui, sans-serif;
   box-shadow: var(--shadow-sm);
 }
 .btn:hover {
